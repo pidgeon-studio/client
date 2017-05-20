@@ -26,6 +26,8 @@ public class MyHealthIndicator implements HealthIndicator {
   public String check() {
     int size = new File(path).list().length;
 
+    System.out.println("Counter = " + size);
+
     return size < 5 ? "UP" : "DOWN";
   }
 
